@@ -1,0 +1,30 @@
+{% extends 'index1.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <div class="container">
+        {% if messages %}
+
+            {% for message in messages %}
+            
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Oops!{{ message }} </strong> 
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+
+        {% endif %}
+    </div>
+
+<form method="post" action="{% url 'login' %}" id="form" class="row g-3 needs-validation " enctype="multipart/form-data">
+    <h3 class="text-center">Sign In</h3>
+    {% csrf_token %}
+    {{ form.as_p }}
+    
+    <input type="submit" value="login" class="btn btn-primary">
+    <!-- <a href="{% url 'register' %}" class="btn btn-danger">register</a> -->
+    <p class="text-center">Don't have account? <a href="{% url 'register' %}" class="text-decoration-none">register</a></p>
+</form>
+{% endblock %}

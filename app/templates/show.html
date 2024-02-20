@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show</title>
+</head>
+<body>
+         {% block head %}
+            <p>User Profile</p>
+           
+        {%  endblock %}
+    
+    {% block content %}
+    
+    <div class="card bg-info mt-5 text-center" style="width:400px; margin:0 auto;">        
+            <div class="card-header text-center">
+                <img class="text-center"  src="{{ person.profile_image.url }}" class="image" width="100px" style="border-radius: 50%;">
+            </div>           
+        
+        <div class="card-body text-center">
+            
+            <p>Fullname: {{person.fullname}}</p>
+            <p>Email: {{person.email}}</p>
+            <p>Phone No: 0{{person.phone}}</p>
+        </div>
+        
+        
+    </div>
+
+    {% endblock %}
+</body>
+</html>

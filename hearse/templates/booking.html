@@ -1,0 +1,60 @@
+{% extends 'index.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block head %}
+    <p>
+        Booking Page  
+    </p>
+    {% endblock %}
+    {% block content %}
+    <div class="container  text-dark h-100" style="transition: .4s ease-in-out;">
+        <div class="row m-2">
+            <div class="col-md-6" id="h-div">
+                {% if hearse_row %}
+                <div class="card text-dark" style="width: 450px" >
+                    <span>Hearse Details</span>  
+                    <img src="{{ hearse_row.hearse_image.url }}" alt="hearse" class="b-imag">
+                    <div class="card-body">
+                      <p class="card-title p-1 m-1">Telepone: {{ hearse_row.driver_phone }}</p>
+                      <span class="text-sm m-1">Model: {{ hearse_row.model}}</span><br>
+                      <span class="card-text text-sm">{{hearse_row.description}}</span>
+                      <a href="#" class="btn btn-primary">See Profile</a>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+            
+            <div class="col-md-6">             
+                    <form action="" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        
+                            <div class="container-fluid" id="form">
+                                <span>User* Details</span>
+                                <div>
+                                    {% for field in frm %}
+                                        {{ field.label}}
+                                        {{ field }}
+                                    {% endfor %}
+                                </div>
+                                <center>
+                                    <button class="btn btn-lg btn-success text-light md-5 mt-2" type="submit">Book Now</button>
+                                </center>
+                                
+                            </div>
+                    </form>
+               
+            </div>
+        </div>
+        
+    </div> 
+   
+    {% endblock %}
+</body>
+</html>

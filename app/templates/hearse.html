@@ -1,0 +1,39 @@
+
+{% extends 'index.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block head %}
+    <p>Hearses</p>
+    {%  endblock %}
+
+    {% block content %}
+        <span class="text-warning p-2 m-2">Book the available Hearses</span>
+        <div class="container-fluid" id="conta">           
+            {% for data in hearses %}
+            <div class="container sub-conta">
+                <img src="{{ data.hearse_image.url }}" alt="image" id="img">
+                <p class="txt"><strong>Driver Name: </strong>{{data.driver_name}} </p>
+                <p class="txt"><strong>Telephone:</strong> 0{{data.driver_phone}}</p>
+                <p class="txt"><strong>Location:</strong> {{data.location}}</p>
+                <!-- <p class="m-1"><strong>Model: </strong>{{data.model}} <strong>Color:</strong> {{data.color}}</p>
+                <p class="m-1"><strong>Des</strong> {{data.description}}</p> -->
+                <a class="btn btn-primary" href="{% url 'index' data.id %}" >Book Now</a>
+                <button class="btn btn-dark">More</button>
+            </div>
+            {% endfor %}
+           
+            
+            
+        </div>
+    <!-- </div> -->
+    {% endblock %}
+   
+</body>
+</html>

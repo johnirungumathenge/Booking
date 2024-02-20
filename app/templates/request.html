@@ -1,0 +1,57 @@
+{% extends 'index.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>request</title>
+</head>
+<body> 
+    {% block head %}
+    <p>Requests</p>
+    
+    {%  endblock %}
+    
+    <div class="container-fluid">
+        {% block content %}      
+
+        <div class="container mt-5">
+            <h2 class="mb-4">User Data</h2>
+            <div class="table-responsive">
+              <table class="table table-hover table-striped">
+                <thead>
+                    {% if requests %}
+                  <tr>
+                    <th>ID</th>
+                    <th>FUllName</th>
+                    <th>Email</th>
+                    <th>FROM*</th>
+                    <th>To*</th>
+                    <th>Day</th>
+                    <th>Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{{requests.id}}</td>
+                    <td>{{requests.fullname}}</td>
+                    <td>{{requests.email}}</td>
+                    <td>{{requests.From}}</td>
+                    <td>{{requests.To}}</td>
+                    <td>{{requests.Day}}</td>
+                    <td>{{requests.time}}</td>
+                    
+                  </tr>
+                  
+                  <!-- Add more rows as needed -->
+                </tbody>
+                {% endif %}
+              </table>
+            </div>
+          </div>
+          
+    
+        {% endblock %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,317 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+#container-fluid{
+    max-width: 20%;
+    min-width: 100px;
+    height: 100vh;
+    margin-left:0;
+    position: fixed;
+    left:0; 
+    transition: .3s ease-in-out;
+   
+}
+#container-fluid.minimized{
+    width: 10%;
+   
+    font-size: 1rem;
+    transition: .4s ease-in-out;
+}
+#main.active{
+    width: 90%;
+    margin-left: 10%;
+    transition: .4s ease-in-out;
+}
+
+
+#main{
+    display: flex;
+    margin: .2rem;
+    margin-left: 20%;
+}
+/* #main{    
+    max-height: 15vh;
+    display: flex;
+    margin:0;
+    padding: 0;
+    width: 255px;
+} */
+.container .img{
+    max-width: 5rem;
+    max-height: 5rem;
+    border-radius: 50%;
+    margin: .5rem;
+}
+.container-fluid p{
+    margin: 1.5rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.container-fluid hr{
+    background: black;
+    position: absolute;
+    top: 3rem;
+}
+body{
+    background: lavender;
+}
+
+/* sidebar */
+.sidebar{
+    width: 100%;
+    margin-top: 1rem;
+   /* background: ; */
+   left: -2rem;
+   position: relative;
+}
+ul{
+    list-style-type: none;
+    
+}
+ul li{
+    padding: .8rem;
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+/* icons */
+.sidebar i{
+    color: black;
+    padding: .5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* main */
+.main{
+    top: 0;
+    width:80%;
+    position: absolute;
+    margin-left: 20%;
+    height: 10vh;
+    background: white;
+    justify-content: space-between;
+    transition: .4s ease-in-out;
+}
+.main .submenu{
+    display: flex;
+    margin: .2rem;
+    padding: .5rem;
+    transition: .4s ease-in-out;
+}
+.submenu p{
+    margin: .2rem;
+    top: 0;
+    position: relative;
+}
+.submenu  i{
+    padding: .3rem;
+    font-size: 1.5rem;
+    font-weight: 600;    
+}
+
+.main .profile{
+    margin: .2rem;
+}
+.main .profile img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.m-menu{
+    top: 4.2rem;
+    width:80%;
+    position: absolute;
+    margin-left: 20%;
+    min-height: 80vh;
+    transition: .4s ease-in-out;
+
+}
+
+/* m-main responsive  */
+.m-menu.menub{
+    width: 90%;
+    margin: 0;  
+    margin-left: 10%;
+    transition: .4s ease-in-out;
+}
+
+/* responsive m-menu  */
+
+/* .m-menu .row1{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1rem;
+    width: %;
+    background: black;    
+} */
+
+.m-menu .row1 .card1{
+    min-width: 31rem;
+    margin: .2rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    height: 10rem;  
+    border-radius: .2rem;
+}
+.sub-image .img{
+    width: 12rem;
+    height: 10rem;
+    border-radius: 0;
+}
+
+/* popup */
+.popup{
+    position: absolute;
+    top: 4.4rem;
+    right: .5rem;
+    min-width: 10rem;
+    cursor: pointer;
+    display: none;
+}
+.popup .p-profile{
+    margin: .2rem;
+    /* background: grey; */
+}
+.popup .p-profile ul{
+    /* padding: .2rem; */
+    list-style-type: none;
+}
+.popup .p-profile p{
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 600;
+}
+.popup .p-profile ul li{
+    padding: .3rem;
+    
+}
+.popup .p-profile ul li a{
+    color: white;    
+}
+
+
+/* footer */
+footer{
+    width: 78%;
+    position: fixed;
+    bottom: .1rem;
+    height: 8vh;
+    background:lavender;
+    margin-left: 20%;
+    transition: .4s ease-in-out;
+}
+
+/* footer responsiveness */
+footer.footer{
+    width: 90%;
+    transition: .4s ease-in-out;
+    margin-left: 10%;
+}
+#link li a:hover{
+    border-radius: .5rem;
+    cursor: progress;
+    background: lime;
+}
+
+/* main menu */
+#mainMenu{
+    width: 80%;
+    position: absolute;
+    top: 4rem;
+    margin-left: 20%;
+    background: wheat;
+       
+}
+/*  div in hearses booking */
+#conta{
+    width: 100%;
+    display: block;
+    background: lavender;
+    max-height: 95vh;
+    overflow-y: scroll;
+}
+
+#conta .sub-conta{
+    width: 30%;
+    height: 50vh;
+    border: 1px solid black;
+    display: inline-block;
+    margin: .7rem;
+    background: white;
+    text-align: center;
+    border-radius: .5rem;
+}
+#conta .sub-conta #img{
+    width: 15rem;
+    height: 10rem;
+    border-radius: 50%;
+    margin: .2rem;
+}
+#conta .sub-conta .txt{
+    font-size: 20px;
+    margin: .2rem;
+    padding: 0;
+    font-weight: 500;
+    font-family: "Roboto";
+}
+
+/* booking styles */
+.container .b-imag{
+   width: 99%;
+    height: 15rem;
+   
+    margin: .2rem;    
+    
+}
+.container #h-div{
+    width: 50%;
+    text-align: center;
+
+}
+
+/* Booking forms */
+#form{
+    width: 100%;
+    border: 1px solid grey;
+    height: 75vh;
+    border-radius: .5rem;
+    margin: .2rem;
+}
+
+#form input{
+    width: 100%;
+    margin: .2rem;
+    padding: .3rem;
+    border: none;
+    border-radius: .5rem;
+    outline: none;
+}
+
+/* update profile */
+#update-profile{
+    width: 80%;
+    margin: 1rem auto;
+    background: lavender;
+    /* border: 1px solid black; */
+}
+
+#update-profile input{
+    width: 99%;
+    margin: .3rem;
+    padding: .5rem;
+    border: none;
+    border-radius: .5rem;
+    color: black;
+    
+}
+#update-profile label_tag{
+    margin: .5rem;
+}
